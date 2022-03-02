@@ -1,0 +1,411 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --backgrond: #000;
+    --text-color: #FFF;
+    --button: #8257E5;
+    --border: #29292E;
+    --border-menu-mobile: #A8A8B3;
+    --text-color-menu-mobile: #E1E1E6;
+  }
+
+body {
+    font-family: 'Manrope', Arial, Helvetica, sans-serif;
+    background: #000;
+}
+
+.mainContainer {
+    background: url(assets/blur-2.png) right top no-repeat, url(assets/blur-1.png) left bottom no-repeat;
+    background-size: 900px;
+    height: 100vh;
+}
+
+  
+#navContainer {
+    box-sizing: border-box;
+    height: 70px;
+    padding: 5rem 10rem 1rem 14rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logoDesktop {
+    display: block;
+}
+.logoMobile {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+
+nav .links-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+  
+nav .links-nav a {
+    display: block;
+    padding: 0.5rem;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+}
+
+
+.buttonTop button {
+    background: rgba(0, 0, 0, 0.0);
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 11px;
+    border: 1px solid #8257E5;
+    border-radius: 6px;
+    padding: 1rem 2.5rem;
+    cursor: pointer;
+}
+
+.text-mobile {
+    display: none;
+}
+
+.buttonTop-mobile {
+    display: none;
+}
+
+.homeContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+    padding: 5rem 10rem 0 10rem;
+}
+
+.title h1 {
+    color: #FFF;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 90px;
+    letter-spacing: -0.03em;
+}
+
+.title-outline h1 {
+    color: #000;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 109px;
+    letter-spacing: -0.03em;
+    text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button), -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+}
+.coffeePic {
+    position: absolute;
+    bottom: 0;
+}
+
+.coffeePic img {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .logoDesktop {
+        display: none;
+    }
+    .logoMobile {
+        display: block;
+    }
+    #navContainer {
+        padding: 3rem 2rem;
+        /* width: 100%; */
+    }
+
+    .text-mobile {
+        display: block;
+        padding: 2rem;
+    }
+
+    .text-mobile h3 {
+        color: #FFF;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 41px;
+        text-align: center;
+    }
+    
+    .buttonTop {
+        display: none;
+    }
+
+    .buttonTop-mobile {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .buttonTop-mobile button {
+        background: rgba(0, 0, 0, 0.0);
+        color: #FFF;
+        text-transform: uppercase;
+        font-size: 11px;
+        border: 1px solid #8257E5;
+        border-radius: 6px;
+        padding: 0.6rem 2.5rem;
+        cursor: pointer;
+    }
+    
+
+    .buttonTop-mobile button img {
+        padding-left: 0.5rem;
+        margin-bottom: -3px;
+    }
+
+    .title h1, .title-outline h1 {
+        font-size: 40px;
+    }
+    .hamburger {
+        display: block;
+        padding-bottom: 0.5rem;
+    }
+
+    .bar1 {
+        display: block;
+        width: 25px;
+        height: 2px;
+        margin: 5px -5px;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background: #8257E5;
+    }
+    
+    .bar2 {
+        display: block;
+        width: 15px;
+        height: 2px;
+        margin: auto 5px;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background: #8257E5;
+    }
+
+    nav {
+        display: none;
+    }
+    .mainContainer {
+        background: url(assets/blur-mobile.png);
+        background-size: cover;
+    }
+    .homeContainer {
+        padding: 5rem 4rem 0 4rem;
+    }
+    .logoMobile {
+        display: block;
+        position: relative;
+        z-index: 100;
+    }
+    .menu-section.on {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #000;
+        z-index: 10;
+    }
+    
+    .menu-section.on nav {
+        display: block;
+        padding-top: 70px;
+    }  
+
+    .menu-section.on nav ul {
+        text-align: center;
+        display: block;
+    }
+
+    .menu-section.on nav ul li {
+        border: 1px solid #29292E;
+        padding: 1px;
+    }
+
+
+    .menu-section.on nav ul li:first-child {
+        margin-top: 30px;
+    }
+
+    .menu-section.on nav ul a {
+        transition-duration: 0.5s;
+        color: #A8A8B3;
+        font-size: 1.2rem;
+        font-weight: normal;
+        line-height: 3rem;
+        display: flex;
+        padding-left: 30px;
+    }
+
+    .menu-section.on nav ul li:hover {
+        color: #FFF;
+        font-weight: 700;
+        background-color: #8257E5;
+        width: 5px;
+        padding-left: 0;
+    }
+    
+    .menu-section.on .hamburger {
+        position: absolute;
+        right: 0;
+        top: 15px;
+        margin-right: 19px;
+        margin-top: 17px;
+    }
+
+    .menu-section.on .hamburger .bar1 {
+        /* transform: rotate(45deg) translate(7px, 7px); */
+        transform: translateY(8px) rotate(45deg);
+    }
+    .menu-section.on .hamburger .bar2 {
+        /* transform: rotate(-45deg) translate(-9px, -5px); */
+        transform: translateY(-8px) rotate(-45deg);
+        width: 25px;
+    }
+
+}
+
+
+@media (max-width: 540px) {
+    nav {
+        display: none;
+    }
+    .bar1 {
+        display: block;
+        width: 25px;
+        height: 2px;
+        margin: 5px -5px;
+        -webkit-transition: 0.3s ease-in;
+        transition: all 0.3s ease-in-out;
+        background: #8257E5;
+    }
+    
+    .bar2 {
+        display: block;
+        width: 15px;
+        height: 2px;
+        margin: auto 5px;
+        -webkit-transition: 0.3s ease-in;
+        transition: all 0.3s ease-in-out;
+        background: #8257E5;
+    }
+    .logoMobile {
+        display: block;
+        position: relative;
+        z-index: 100;
+    }
+    .menu-section.on {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #000;
+        z-index: 10;
+    }
+    
+    .menu-section.on nav {
+        display: block;
+        padding-top: 70px;
+    }  
+
+    .menu-section.on nav ul {
+        text-align: center;
+        display: block;
+    }
+
+    .menu-section.on nav ul li:first-child {
+        margin-top: 30px;
+    }
+
+
+    .menu-section.on nav ul a {
+        transition-duration: 0.5s;
+        color: #A8A8B3;
+        font-size: 1.2rem;
+        font-weight: normal;
+        line-height: 3rem;
+        display: flex;
+        padding-left: 30px;
+    }
+
+    .menu-section.on nav ul li:hover {
+        color: #FFF;
+        font-weight: 700;
+        background-color: #8257E5;
+        width: 5px;
+        padding-left: 0;
+    }
+
+    
+    .menu-section.on .hamburger {
+        position: absolute;
+        right: 0;
+        top: 15px;
+        margin-right: 19px;
+        margin-top: 17px;
+    }
+
+    .menu-section.on .hamburger .bar1 {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+    .menu-section.on .hamburger .bar2 {
+        transform: rotate(-45deg) translate(-9px, -5px);
+        width: 25px;
+    }
+
+    .homeContainer {
+        padding: 1rem;
+    }
+
+    .title h1, .title-outline h1 {
+        font-size: 36px;
+    }
+
+    .buttonTop {
+        display: none;
+    }
+    
+    .hamburger {
+        display: block;
+        padding-bottom: 0.5rem;
+    }
+
+    .bar1 {
+        display: block;
+        width: 25px;
+        height: 2px;
+        margin: 5px -5px;
+        -webkit-transition: all 0.3s ease-in;
+        transition: all 0.3s ease-in-out;
+        background: #8257E5;
+    }
+    
+    .bar2 {
+        display: block;
+        width: 15px;
+        height: 2px;
+        margin: auto 5px;
+        -webkit-transition: all 0.3s ease-in;
+        transition: all 0.3s ease-in-out;
+        background: #8257E5;
+    }
+}
